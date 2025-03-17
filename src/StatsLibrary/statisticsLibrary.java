@@ -1,7 +1,10 @@
 package StatsLibrary;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
+
+import static StatsLibrary.cpSolver.combination;
 
 public class statisticsLibrary {
     // method that returns the mean/average of an array of ints
@@ -59,6 +62,42 @@ public class statisticsLibrary {
         return Math.sqrt(sum / numbers.length);
     }
 
+    // method to find the union of two lists (combines them without duplicates)
+    public static ArrayList<String> findUnion(ArrayList<String> firstList, ArrayList<String> secondList) {
+        ArrayList<String> unionResult = new ArrayList<>(firstList); // copy firstList into a new list
+
+        for (String element : secondList) { // go through each item in secondList
+            if (!unionResult.contains(element)) { // if it's not already in unionResult, add it
+                unionResult.add(element);
+            }
+        }
+        return unionResult; // return the final list with all unique elements
+    }
+
+    // method to find the intersection (common elements between both lists)
+    public static ArrayList<String> findIntersection(ArrayList<String> firstList, ArrayList<String> secondList) {
+        ArrayList<String> intersectionResult = new ArrayList<>(); // new empty list to store common items
+
+        for (String element : firstList) { // go through firstList
+            if (secondList.contains(element)) { // if secondList also has it, add to intersectionResult
+                intersectionResult.add(element);
+            }
+        }
+        return intersectionResult; // return the list of common elements
+    }
+
+    // method to find the complement (stuff in universalSet that isn't in subset)
+    public static ArrayList<String> findComplement(ArrayList<String> universalSet, ArrayList<String> subset) {
+        ArrayList<String> complementResult = new ArrayList<>(); // new list for missing items
+
+        for (String element : universalSet) { // go through universal set
+            if (!subset.contains(element)) { // if it's NOT in subset, add it to complement
+                complementResult.add(element);
+            }
+        }
+        return complementResult; // return the complement list
+    }
+
     // method that returns the product of two probabilities if they are independent
     public static double multiplicativeLaw(double pA, double pB, boolean independent) {
         if (independent) {
@@ -85,16 +124,6 @@ public class statisticsLibrary {
         return -1;
     }
 
-    // method that calculates the number of combinations of n items taken r at a time
-    public static BigInteger combination(int n, int r) {
-        return factorial(n).divide(factorial(r).multiply(factorial(n - r)));
-    }
-
-    // method that calculates the number of permutations of n items taken r at a time
-    public static BigInteger permutation(int n, int r) {
-        return factorial(n).divide(factorial(n - r));
-    }
-
     // method that calculates the probability of A given B using Bayes' theorem
     public static double bayesTheorem(double pBA, double pA, double pB) {
         if (pB == 0) {
@@ -112,7 +141,7 @@ public class statisticsLibrary {
 
     // method that calculates the binomial probability using combination and probability
     public static BigInteger binomialProbability(int n, int r, double p) {
-        BigInteger combinations = cpSolver.combination(n, r);
+        BigInteger combinations = combination(n, r);
         double probability = Math.pow(p, r) * Math.pow(1 - p, n - r);
         return combinations.multiply(BigInteger.valueOf((long)(probability * 1000000)))
                 .divide(BigInteger.valueOf(1000000));
@@ -129,10 +158,24 @@ public class statisticsLibrary {
     }
 
     // method that calculates the geometric probability mass function
-    public static double geometricPMF(int k, double p) {
+    public static double geometric(int k, double p) {
         return Math.pow(1 - p, k - 1) * p;
     }
+    // method that calculates geometric expected value
+    public static double geometricExpected(double p) {
+        if (p <= 0 || p > 1) {
+            return -1;
+        }
+        return 1 / p;
+    }
 
+    // method that calculates geometric variance
+    public static double geometricVariance(double p) {
+        if (p <= 0 || p > 1) {
+            return -1;
+        }
+        return (1 - p) / (p * p);
+    }
     // method that calculates the factorial of a number using BigInteger
     private static BigInteger factorial(int n) {
         if (n <= 1) {
@@ -143,5 +186,52 @@ public class statisticsLibrary {
             result = result.multiply(BigInteger.valueOf(i));
         }
         return result;
+    }
+    // method that calculates hypergeometric probability
+    public static double hypergeometric(int N, int K, int n, int k) {
+        if (k > K || k > n || n > N || K > N) {
+            return 0.0;
+        }
+
+        BigInteger numerator = combination(K, k).multiply(combination(N - K, n - k));
+        BigInteger denominator = combination(N, n);
+
+        return numerator.doubleValue() / denominator.doubleValue();
+    }
+
+    // method that calculates hypergeometric expected value
+    public static double hypergeometricExpected(int N, int K, int n) {
+        return n * ((double) K / N);
+    }
+
+    // method that calculates hypergeometric variance
+    public static double hypergeometricVariance(int N, int K, int n) {
+        double p = (double) K / N;
+        return n * p * (1 - p) * ((N - n) / (N - 1));
+    }
+
+    // method that calculates negative binomial probability (r successes, k trials, probability p)
+    public static double negativeBinomial(int r, int k, double p) {
+        if (p <= 0 || p > 1 || k < r) {
+            return 0.0;
+        }
+        BigInteger combinations = combination(k - 1, r - 1);
+        return combinations.doubleValue() * Math.pow(p, r) * Math.pow(1 - p, k - r);
+    }
+
+    // method that calculates negative binomial expected value
+    public static double negativeBinomialExpected(int r, double p) {
+        if (p <= 0 || p > 1) {
+            return -1;
+        }
+        return r / p;
+    }
+
+    // method that calculates negative binomial variance
+    public static double negativeBinomialVariance(int r, double p) {
+        if (p <= 0 || p > 1) {
+            return -1;
+        }
+        return (r * (1 - p)) / (p * p);
     }
 }

@@ -1,4 +1,12 @@
 package poketcgproject.cards.pokemon;
+/**
+ * Teal Mask Ogerpon EX card
+ * Base HP: 220
+ * Attack: Myriad Leaf Shower (30 base damage)
+ * Energy Cost: 2
+ * Special Effect: Add 20 damage for each energy card
+ * attached to both active Pokemon
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 public class OgerponEX extends Pokemon {

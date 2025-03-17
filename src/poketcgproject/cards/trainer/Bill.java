@@ -1,5 +1,8 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Bill
+ * Effect: Draw 2 cards from your deck
+ */
 import poketcgproject.PTCG;
 
 public class Bill extends Trainer {

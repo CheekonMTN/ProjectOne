@@ -27,7 +27,7 @@ public class Birthday {
         for (int i = 0; i < numberOfPeople; i++) {
             int birthday = random.nextInt(365); // Pick a random birthday (0-364)
             if (usedBdays[birthday]) {
-                return true; // Found a match
+                return true;
             }
             usedBdays[birthday] = true;
         }
@@ -35,8 +35,9 @@ public class Birthday {
     }
 
     public static void main(String[] args) {
-        int groupSize = 33;  // Number of people in the group
-        int totalSimulations = 10000;  // Number of times we test this
+        // Number of people in the group
+        int groupSize = 33;
+        int totalSimulations = 10000;
 
         Birthday simulation = new Birthday(groupSize, totalSimulations);
         double probability = simulation.findProbability();

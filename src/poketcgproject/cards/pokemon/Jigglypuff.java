@@ -1,4 +1,12 @@
 package poketcgproject.cards.pokemon;
+/**
+ * Jigglypuff card
+ * Base HP: 80
+ * Attack: Let's rollout! (150 base damage)
+ * Energy Cost: 3
+ * Special Effect: For each additional Pokemon with Let's rollout!
+ * on your bench, multiply damage by number of Pokemon
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 

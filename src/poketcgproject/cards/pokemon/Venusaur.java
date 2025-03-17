@@ -1,5 +1,12 @@
 package poketcgproject.cards.pokemon;
-
+/**
+ * Venusaur card
+ * Base HP: 220
+ * Attack: Solar Beam (120 base damage)
+ * Energy Cost: 3
+ * Special Effect: If opponent's active Pokemon has
+ * 2 or more energy attached, deals 50 additional damage
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 

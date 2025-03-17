@@ -1,5 +1,8 @@
 package poketcgproject.cards;
 
+/**
+ * Abstract class representing a card in PTCG
+ */
 public abstract class Card {
     protected String name;
 

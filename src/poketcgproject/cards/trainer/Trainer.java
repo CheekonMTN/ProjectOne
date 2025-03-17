@@ -1,5 +1,7 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * abstract Trainer card that each trainer card is based off of
+ */
 import poketcgproject.PTCG;
 import poketcgproject.cards.Card;
 

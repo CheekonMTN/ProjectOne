@@ -1,5 +1,13 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Energy Patch
+ * Effect: Attach 1 energy to 1 of your Benched Pokemon
+ * Input required:
+ * - Player selects target Pokemon from bench
+ * Restrictions:
+ * - Cannot be used if bench is empty
+ * - Can only target benched Pokemon
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 import poketcgproject.cards.pokemon.Pokemon;

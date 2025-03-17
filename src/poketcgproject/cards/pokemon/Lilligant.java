@@ -1,5 +1,12 @@
 package poketcgproject.cards.pokemon;
-
+/**
+ * Hisuian Lilligant VStar card
+ * Base HP: 140
+ * Attack: Parallel Spin (100 base damage)
+ * Energy Cost: 3
+ * Special Effect: Discard 1 energy after attack and
+ * add 1 energy card from your deck to your hand
+ */
 import poketcgproject.PTCG;
 import poketcgproject.cards.energy.Energy;
 import poketcgproject.Player;

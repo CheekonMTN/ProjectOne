@@ -1,5 +1,11 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Plus Power
+ * Effect: Add 20 damage to your Active Pokemon's attack
+ * Restrictions:
+ * - Can only be used if you have an Active Pokemon
+ * - Damage boost lasts until next attack
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 import poketcgproject.cards.pokemon.Pokemon;

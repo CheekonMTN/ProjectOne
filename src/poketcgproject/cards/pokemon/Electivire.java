@@ -1,4 +1,12 @@
 package poketcgproject.cards.pokemon;
+/**
+ * Electivire card
+ * Base HP: 120
+ * Attack: Discharge (80 base damage)
+ * Energy Cost: 3
+ * Special Effect: For each energy attached, flip a coin.
+ * Each heads adds 80 damage. After attack, discard all energy.
+ */
 
 import poketcgproject.PTCG;
 public class Electivire extends Pokemon {

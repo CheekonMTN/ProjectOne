@@ -1,4 +1,11 @@
 package poketcgproject.cards.pokemon;
+/**
+ * Lugia card
+ * Base HP: 150
+ * Attack: Elemental Blast (150 base damage)
+ * Energy Cost: 3
+ * Special Effect: After using attack, discard all 3 energy
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 public class Lugia extends Pokemon {

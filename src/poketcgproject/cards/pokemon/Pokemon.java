@@ -1,4 +1,9 @@
 package poketcgproject.cards.pokemon;
+/**
+ * Abstract class used by all pokemon cards
+ * Manages all of their stats and attacks
+ * Attacks are overridden in each respective pokemon class
+ */
 
 import poketcgproject.PTCG;
 import poketcgproject.cards.Card;

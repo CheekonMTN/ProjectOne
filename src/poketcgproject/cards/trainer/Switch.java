@@ -1,5 +1,12 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Switch
+ * Effect: Switch your Active Pokemon with one
+ * of your Benched Pokemon
+ * Restrictions:
+ * - Cannot be used if bench is empty
+ * - Cannot be used if there is no active Pokemon
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 import poketcgproject.cards.pokemon.Pokemon;

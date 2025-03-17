@@ -1,6 +1,12 @@
 package poketcgproject.cards.pokemon;
 import poketcgproject.PTCG;
-
+/**
+ * Meowth card
+ * Base HP: 70
+ * Attack: Pay Day (50 base damage)
+ * Energy Cost: 2
+ * Special Effect: Draw 1 card after dealing damage
+ */
 public class Meowth extends Pokemon {
     private PTCG game;
 

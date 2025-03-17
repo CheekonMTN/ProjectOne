@@ -22,14 +22,13 @@ public class cpSolver {
     // Method to compute combinations C(n, r) = n! / (r! * (n-r)!)
     public static BigInteger combination(int n, int r) {
         if (r > n)
-            return BigInteger.ZERO; // Invalid case
+            return BigInteger.ZERO;
         return factorial(n).divide(factorial(r).multiply(factorial(n - r)));
     }
 
     public static void main(String[] args) {
-        // Input values (Replace these with any numbers you want)
-        int num = 6; // Change this to any number
-        int r = 3;   // Change this as well
+        int num = 6;
+        int r = 3;
 
         System.out.println("Factorial of " + num + " (" + num + "!) = " + factorial(num));
         System.out.println("Permutation P(" + num + ", " + r + ") = " + permutation(num, r));

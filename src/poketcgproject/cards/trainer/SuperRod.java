@@ -1,5 +1,16 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Super Rod
+ * Effect: Shuffle 3 Pokemon, Energy cards, or both
+ * from discard pile into deck
+ * Core mechanics:
+ * - Select up to 3 cards from discard pile
+ * - Return selected cards to deck
+ * - Shuffle deck after
+ * Restrictions:
+ * - Cannot be used if discard pile is empty
+ * - Must target Pokemon or Energy cards only
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 import poketcgproject.cards.Card;

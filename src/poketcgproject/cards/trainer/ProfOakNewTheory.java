@@ -1,5 +1,11 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Professor's Research
+ * Effect: Discard your entire hand and draw 7 new cards
+ * Core mechanics:
+ * - All cards in hand are moved to discard pile
+ * - Draw 7 new cards from deck
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 import java.util.Collections;

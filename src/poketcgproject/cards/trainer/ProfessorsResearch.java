@@ -1,5 +1,14 @@
 package poketcgproject.cards.trainer;
-
+/**
+ * Trainer card: Professor's Research
+ * Effect: Discard your hand and draw 7 cards
+ * Core mechanics:
+ * - Fully discards current hand
+ * - Draws exactly 7 new cards
+ * Restrictions:
+ * - Cannot be used if deck has less than 7 cards
+ * - All cards in hand are discarded before drawing
+ */
 import poketcgproject.PTCG;
 import poketcgproject.Player;
 
