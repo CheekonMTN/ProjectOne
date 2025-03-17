@@ -22,7 +22,6 @@ public class Player {
         hasAttachedEnergy = false;
     }
 
-    // Getters and Setters
     public List<Card> getDeck() { return deck; }
     public List<Card> getHand() { return hand; }
     public List<Card> getDiscard() { return discard; }
@@ -34,37 +33,37 @@ public class Player {
     public void setActivePokemon(Pokemon pokemon) {
         this.activePokemon = pokemon;
     }
-
+    // track if energy was attached this turn
     public void setHasAttachedEnergy(boolean value) {
         this.hasAttachedEnergy = value;
     }
 
     // Helper methods
+
+    //check if hand has pokemon
     public boolean hasPokemonInHand() {
         return hand.stream().anyMatch(card -> card instanceof Pokemon);
     }
-
+    // add card to hand
     public void addCardToHand(Card card) {
         hand.add(card);
     }
-
+    // remove card from hand
     public void removeCardFromHand(Card card) {
         hand.remove(card);
     }
-
+    // put card in discard pile
     public void addCardToDiscard(Card card) {
         discard.add(card);
     }
-
+    // add pokemon to bench
     public void addCardToBench(Pokemon pokemon) {
         bench.add(pokemon);
     }
 
-    public Pokemon removeFromBench(int index) {
-        return bench.remove(index);
-    }
+    // take 6 cards from deck for prizes
     public void setPrizeCards() {
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 6; i++) {
             if (!deck.isEmpty()) {
                 prize.add(deck.remove(0));
             }

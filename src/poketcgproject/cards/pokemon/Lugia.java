@@ -1,6 +1,6 @@
 package poketcgproject.cards.pokemon;
 /**
- * Lugia card
+ * Lugia card : Adam's card
  * Base HP: 150
  * Attack: Elemental Blast (150 base damage)
  * Energy Cost: 3

@@ -1,6 +1,6 @@
 package poketcgproject.cards.pokemon;
 /**
- * Electivire card
+ * Electivire card : Justin's card
  * Base HP: 120
  * Attack: Discharge (80 base damage)
  * Energy Cost: 3

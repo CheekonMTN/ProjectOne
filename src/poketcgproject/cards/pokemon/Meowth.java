@@ -1,7 +1,7 @@
 package poketcgproject.cards.pokemon;
 import poketcgproject.PTCG;
 /**
- * Meowth card
+ * Meowth card : Aazan's card
  * Base HP: 70
  * Attack: Pay Day (50 base damage)
  * Energy Cost: 2

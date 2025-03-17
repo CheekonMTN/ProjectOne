@@ -1,5 +1,9 @@
 package poketcgproject;
-
+/**
+ * Monte Carlo simulation for Pokémon TCG
+ * Simulates the odds of drawing a Pokémon or Rare Candy in a hand
+ * and the odds of having a "brick" (no Pokémon in hand)
+ */
 
 import poketcgproject.cards.Card;
 import poketcgproject.cards.energy.Energy;

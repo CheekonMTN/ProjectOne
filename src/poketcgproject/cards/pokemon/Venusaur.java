@@ -1,6 +1,6 @@
 package poketcgproject.cards.pokemon;
 /**
- * Venusaur card
+ * Venusaur card : Samran's card
  * Base HP: 220
  * Attack: Solar Beam (120 base damage)
  * Energy Cost: 3

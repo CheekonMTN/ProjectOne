@@ -1,6 +1,6 @@
 package poketcgproject.cards.pokemon;
 /**
- * Hisuian Lilligant VStar card
+ * Hisuian Lilligant VStar card : Chrees' card
  * Base HP: 140
  * Attack: Parallel Spin (100 base damage)
  * Energy Cost: 3

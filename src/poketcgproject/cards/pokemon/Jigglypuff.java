@@ -1,6 +1,6 @@
 package poketcgproject.cards.pokemon;
 /**
- * Jigglypuff card
+ * Jigglypuff card : Samboni's card
  * Base HP: 80
  * Attack: Let's rollout! (150 base damage)
  * Energy Cost: 3

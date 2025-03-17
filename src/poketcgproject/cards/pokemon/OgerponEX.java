@@ -1,6 +1,6 @@
 package poketcgproject.cards.pokemon;
 /**
- * Teal Mask Ogerpon EX card
+ * Teal Mask Ogerpon EX card : Luke's card
  * Base HP: 220
  * Attack: Myriad Leaf Shower (30 base damage)
  * Energy Cost: 2
